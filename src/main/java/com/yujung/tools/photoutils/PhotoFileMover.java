@@ -66,7 +66,9 @@ public class PhotoFileMover {
                 //System.out.println(file.getName() + " --> " + date);
                 sortFile(date, file, destRoot, fileSeparator, dirMap, testOnly);
             } catch (ImageProcessingException e) {
-                System.out.println("Probably not an image, skipping " + file.getName());
+                System.out.println("WARNING: Probably not an image, skipping " + file.getName());
+            } catch (IOException io) {
+                System.out.println("ERROR: Cannot read file " + file.getName() + ": " + io.getLocalizedMessage());
             }
         }
     }
