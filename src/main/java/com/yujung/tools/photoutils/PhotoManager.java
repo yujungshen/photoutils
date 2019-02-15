@@ -20,7 +20,7 @@ public class PhotoManager {
 //            PhotoUtils7.copyFileName(args[1], args[2], Boolean.parseBoolean(args[3]));
 //        }
     
-        PhotoFileMover mover = new PhotoFileMover(args[0], args[1]);
+        PhotoFileMover mover = new PhotoFileMover(args[0], args[1], null);
         mover.sortByDate(Boolean.parseBoolean(args[2]));
     }
 }
